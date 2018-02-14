@@ -14,11 +14,36 @@ led4 = LED(19)
 led5 = LED(26)
 led6 = LED(9)
 
+li = (led1, led2, led3, led4, led5, led6)
+button1 = GPIO.input(18)
+
+def button_direction
+    p = 1
+    if button1 == False:
+        print("button pressed")
+        sleep(.1)
+        p = p + 1
 
 
 def forward_racing():
-    x = 0
-    for x in range(1, 6):
-        ledx.on()
+    for elem in li:
+        elem.on()
         sleep(t)
-        ledx.off()
+        elem.off()
+
+def backward_racing():
+    for elem in reversed(li):
+        elem.on()
+        sleep(t)
+        elem.off()
+
+def running_stuff:
+    while True:
+        button_direction()
+        if p = 1:
+            forward_racing()
+        elif p = 2:
+            backward_racing()
+        else:
+            p = 1
+            
